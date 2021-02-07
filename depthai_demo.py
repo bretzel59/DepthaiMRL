@@ -285,7 +285,7 @@ class DepthAI:
                             frame = show_tracklets(tracklets, frame, labels)
                             # spin through tracklets and send data to mrl
                             tracklet_nr = tracklets.getNrTracklets()
-
+                            print('tracklet_nr ', len(tracklet_nr))
                             for i in range(tracklet_nr):
                                 tracklet        = tracklets.getTracklet(i)
                                 left_coord      = tracklet.getLeftCoord()
