@@ -284,25 +284,25 @@ class DepthAI:
                         if enable_object_tracker and tracklets is not None:
                             frame = show_tracklets(tracklets, frame, labels)
                             # spin through tracklets and send data to mrl
-                                tracklet_nr = tracklets.getNrTracklets()
+                            tracklet_nr = tracklets.getNrTracklets()
 
-                                    for i in range(tracklet_nr):
-                                        tracklet        = tracklets.getTracklet(i)
-                                        left_coord      = tracklet.getLeftCoord()
-                                        top_coord       = tracklet.getTopCoord()
-                                        right_coord     = tracklet.getRightCoord()
-                                        bottom_coord    = tracklet.getBottomCoord()
-                                        tracklet_id     = tracklet.getId()
-                                        tracklet_label  = labels[tracklet.getLabel()]
-                                        tracklet_status = tracklet.getStatus()
+                            for i in range(tracklet_nr):
+                                tracklet        = tracklets.getTracklet(i)
+                                left_coord      = tracklet.getLeftCoord()
+                                top_coord       = tracklet.getTopCoord()
+                                right_coord     = tracklet.getRightCoord()
+                                bottom_coord    = tracklet.getBottomCoord()
+                                tracklet_id     = tracklet.getId()
+                                tracklet_label  = labels[tracklet.getLabel()]
+                                tracklet_status = tracklet.getStatus()
 
-                                        # send it
-                                        connection = http.client.HTTPConnection('localhost', 8888)
-                                        headers = {'Content-type': 'application/json'}
-                                        connection.request("GET", "/api/service/python/exec/onDepthAi('" + tracklet_label + "')")
-                                        response = connection.getresponse()
-                                        print("Status: {} and reason: {}".format(response.status, response.reason))
-                                        print(response.read().decode())
+                                # send it
+                                connection = http.client.HTTPConnection('localhost', 8888)
+                                headers = {'Content-type': 'application/json'}
+                                connection.request("GET", "/api/service/python/exec/onDepthAi('" + tracklet_label + "')")
+                                response = connection.getresponse()
+                                print("Status: {} and reason: {}".format(response.status, response.reason))
+                                print(response.read().decode())
 
                     cv2.putText(frame, "fps: " + str(frame_count_prev[window_name]), (25, 50), cv2.FONT_HERSHEY_SIMPLEX, 1.0, (0, 0, 0))
                     cv2.putText(frame, "NN fps: " + str(frame_count_prev['nn'][camera]), (2, frame.shape[0] - 4), cv2.FONT_HERSHEY_SIMPLEX, 0.4, (0, 255, 0))
