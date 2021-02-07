@@ -1,0 +1,114 @@
+No calibration file. Using Calibration Defaults.
+Using depthai module from:  C:\Python39\lib\site-packages\depthai.cp39-win_amd64.pyd
+Depthai version installed:  0.4.1.1
+[92mCompiled mode found: compiled for 14 shaves, 14 cmx_slices and 1 NN_engines [0m
+XLink initialized.
+Sending internal device firmware
+Successfully connected to device.
+Usb speed : Unknown
+Mx serial id : UNKNOWN
+Loading config file
+Attempting to open stream config_d2h
+watchdog started
+Successfully opened stream config_d2h with ID #0!
+Closing stream config_d2h: ...
+Closing stream config_d2h: DONE.
+EEPROM data: valid (v5)
+  Board name     : BW1098OBC
+  Board rev      : R0M0E0
+  HFOV L/R       : 71.86 deg
+  HFOV RGB       : 68.7938 deg
+  L-R   distance : 7.5 cm
+  L-RGB distance : 3.75 cm
+  L/R swapped    : yes
+  L/R crop region: center
+  Rectification Rotation R1 (left):
+    0.999920,   -0.012109,    0.003756,
+    0.012110,    0.999927,   -0.000174,
+   -0.003754,    0.000220,    0.999993,
+  Rectification Rotation R2 (right):
+    0.999833,   -0.017765,   -0.004185,
+    0.017766,    0.999842,    0.000160,
+    0.004182,   -0.000234,    0.999991,
+  Calibration intrinsic matrix M1 (left):
+  853.231689,    0.000000,  630.089417,
+    0.000000,  853.485291,  391.585876,
+    0.000000,    0.000000,    1.000000,
+  Calibration intrinsic matrix M2 (right):
+  852.854980,    0.000000,  635.736023,
+    0.000000,  853.112793,  396.599396,
+    0.000000,    0.000000,    1.000000,
+  Calibration rotation matrix R:
+    0.999952,    0.005658,    0.007934,
+   -0.005655,    0.999984,   -0.000475,
+   -0.007937,    0.000430,    0.999968,
+  Calibration translation matrix T:
+   -7.460234,
+    0.132554,
+    0.031228,
+  Calibration Distortion Coeff d1 (Left):
+   -5.232944,   15.552292,    0.001494,    0.001656,  -14.706965,   -5.277097,   15.744266,
+  -14.903312,    0.000000,    0.000000,    0.000000,    0.000000,    0.000000,    0.000000,
+  Calibration Distortion Coeff d2 (Right):
+   -5.441023,   17.815271,   -0.000246,    0.000553,  -17.922167,   -5.490101,   18.012297,
+  -18.115309,    0.000000,    0.000000,    0.000000,    0.000000,    0.000000,    0.000000,
+['metaout', 'previewout']
+Available streams: ['meta_d2h', 'left', 'right', 'disparity', 'depth', 'metaout', 'previewout', 'jpegout', 'video', 'object_tracker', 'rectified_left', 'rectified_right', 'color']
+C:\Windows\System32\depthai\resources\nn/mobilenet-ssd/mobilenet-ssd.json
+depthai: Using calibration from stored in EEPROM
+config_h2d json:
+{"_board":{"calib_data":[0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0],"mesh_left":[0.0],"mesh_right":[0.0]},"_load_inBlob":true,"_pipeline":{"_streams":[{"name":"metaout"},{"name":"previewout"}]},"ai":{"NCEs":1,"NN_config":{"NN_family":"mobilenet","confidence_threshold":0.5,"output_format":"detection"},"blob0_size":14477056,"blob1_size":0,"calc_dist_to_bb":true,"camera_input":"rgb","cmx_slices":14,"keep_aspect_ratio":true,"num_stages":1,"shaves":14},"app":{"enable_reconfig":true,"sync_sequence_numbers":false,"sync_video_meta_streams":false,"usb_chunk_KiB":64},"board":{"clear-eeprom":false,"left_fov_deg":71.86000061035156,"left_to_rgb_distance_m":0.03750000149011612,"left_to_right_distance_m":0.07500000298023224,"name":"","override-eeprom":false,"revision":"","rgb_fov_deg":68.7938003540039,"stereo_center_crop":false,"store-to-eeprom":false,"swap-left-and-right-cameras":true},"camera":{"mono":{"fps":30.0,"resolution_h":400,"resolution_w":640},"rgb":{"fps":30.0,"resolution_h":1080,"resolution_w":1920}},"depth":{"depth_limit_mm":10000,"lr_check":false,"median_kernel_size":7,"padding_factor":0.30000001192092896,"warp_rectify":{"edge_fill_color":0,"mirror_frame":true,"use_mesh":false}},"ot":{"confidence_threshold":0.5,"max_tracklets":20}}
+size of input string json_config_obj to config_h2d is ->1652
+size of json_config_obj that is expected to be sent to config_h2d is ->1048576
+Attempting to open stream config_h2d
+Successfully opened stream config_h2d with ID #1!
+Writing 1048576 bytes to config_h2d
+!!! XLink write successful: config_h2d (1048576)
+Closing stream config_h2d: ...
+Closing stream config_h2d: DONE.
+Creating observer stream host_capture: ...
+Attempting to open stream host_capture
+Successfully opened stream host_capture with ID #0!
+Creating observer stream host_capture: DONE.
+Read: 14477056
+Attempting to open stream inBlob
+Successfully opened stream inBlob with ID #1!
+Writing 14477056 bytes to inBlob
+!!! XLink write successful: inBlob (14477056)
+Closing stream inBlob: ...
+Closing stream inBlob: DONE.
+depthai: done sending Blob file C:\Windows\System32\depthai\resources\nn/mobilenet-ssd/mobilenet-ssd.blob.sh14cmx14NCE1
+Attempting to open stream outBlob
+Successfully opened stream outBlob with ID #1!
+Closing stream outBlob: ...
+Closing stream outBlob: DONE.
+Input layer :
+Name: data
+Index: 0
+Element type: uint8
+Element size:  1byte
+Offset: 0 byte
+Dimensions: [Batch : 1, Channel : 3, Height : 300, Width : 300]
+
+Output layer :
+Name: detection_out
+Index: 0
+Element type: float16
+Element size:  2 bytes
+Offset: 0 byte
+Dimensions: [Batch : 1, Channel : 1, Height : 100, Width : 7]
+
+CNN to depth bounding-box mapping: start(159, 39), max_size(321, 321)
+Host stream start:metaout
+Opening stream for read: metaout
+Attempting to open stream metaout
+Successfully opened stream metaout with ID #2!
+Starting thread for stream: metaout
+Host stream start:previewout
+Opening stream for read: previewout
+Attempting to open stream previewout
+Started thread for stream: metaout
+Successfully opened stream previewout with ID #1!
+Starting thread for stream: previewout
+depthai: INIT OK!
+Started thread for stream: previewout
